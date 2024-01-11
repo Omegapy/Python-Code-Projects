@@ -9,10 +9,10 @@
 
 Projects Description:  
 How to read/write/manipulate PDF files using PyPDF.  
- [PyPDF v3 and above Documentation](https://pypdf.readthedocs.io/en/stable/) 
+[PyPDF v3 and above Documentation](https://pypdf.readthedocs.io/en/stable/) 
 
 Credit: 
-[Control PDF with Python & PyPDF2](https://www.udemy.com/course/control-pdf-with-python-pypdf2) Udemy - Conny Soderholm
+[Control PDF with Python & PyPDF2](https://www.udemy.com/course/control-pdf-with-python-pypdf2) Udemy - Conny Soderholm  
 The original code was substantially modified from PyPDF2 to PyPDF v3.17.4, to meet my requirements, and to add functionally to the program.
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -50,25 +50,26 @@ class pypdf.PdfReader(stream: Union[str, IO[Any], Path], strict: bool = False, p
 ```
 
 Parameters
-- stream – A File object or an object that supports the standard read and seek methods similar to a File object. Could also be a string representing a path to a PDF file.
+- stream â€“ A File object or an object that supports the standard read and seek methods similar to a File object. Could also be a string representing a path to a PDF file.
 
-- strict – Determines whether the user should be warned of all problems and also causes some correctable problems to be fatal. Defaults to False.
+- strict â€“ Determines whether the user should be warned of all problems and also causes some correctable problems to be fatal. Defaults to False.
 
-- password – Decrypt PDF file at initialization. If the password is None, the file will not be decrypted. Defaults to None
+- password â€“ Decrypt PDF file at initialization. If the password is None, the file will not be decrypted. Defaults to None
 
 Project map:
 - Load and Read a PDF 
-    - First methode -``` with open(file_name, "rb") as pdf_file: ```-
-    - Second methode -```pdf_reader = PdfReader("docs/WorkStation.pdf")```-
-- PDF files Metadata -```doc_info = pdf_reader.metadata```
+    - First method ``` with open(file_name, "rb") as pdf_file: ```
+    - Second method ```pdf_reader = PdfReader("docs/WorkStation.pdf")```
+- PDF files Metadata ```doc_info = pdf_reader.metadata```
     - Metadata (unscripted) 
     - Encrypted Metadata
-- Fix for encrypted Metadata -```writer = PdfWriter().append_pages_from_reader(pdf_reader)```-
-- PDF Fields -```fields = pdf_reader.get_fields()```-
-- Page Document Layout -```pdf_reader.page_layout```
-- Page Mode (Document outline) -```pdf_reader.page_mode```-
-- XPM Metadata -```xmp = pdf_reader.xmp_metadata```-
-- Get Text From Page - full page and lines -```xmp = pdf_reader.xmp_metadata``` and  -```for number, line in enumerate(full_page_text.splitlines()): ```-
+- Fix for encrypted Metadata ```writer = PdfWriter().append_pages_from_reader(pdf_reader)```
+- PDF Fields ```fields = pdf_reader.get_fields()```
+- Page Document Layout ```pdf_reader.page_layout```
+- Page Mode (Document outline) ```pdf_reader.page_mode```
+- XPM Metadata ```xmp = pdf_reader.xmp_metadata```
+- Get Text From Page - full page and lines ```xmp = pdf_reader.xmp_metadata``` and  
+  ```for number, line in enumerate(full_page_text.splitlines()): ```
 
 
 
