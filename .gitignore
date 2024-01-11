@@ -1,0 +1,10 @@
+# API Keys 
+**/**/.env
+# Pycharm files
+**/**/.idea/
+# Virtual Env.
+**/**/.venv/
+# Jypiter 
+**/**/.ipynb_checkpoints/
+# Documents 
+**/**/Doc_PYPDF2/

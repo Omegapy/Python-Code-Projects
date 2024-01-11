@@ -27,11 +27,13 @@ My Links:
 -----------------------------------------------------------------------------------------------------------------------------
 
 Directories:  
-- PDF with PyPDF3
+- PDF with PyPDF
+	
 
 -----------------------------------------------------------------------------------------------------------------------------
-## PDF with PyPDF3
+## PDF with PyPDF
 -----------------------------------------------------------------------------------------------------------------------------
 
 Projects Description:
-
+How to read/write/manipulate PDF files using PyPDF.  
+[PyPDF v3 and above Documentation](https://pypdf.readthedocs.io/en/stable/)  
