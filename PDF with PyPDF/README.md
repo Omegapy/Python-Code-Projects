@@ -85,7 +85,7 @@ Using PyPDF to manipulate PDF files.
 - How to split and join pages
 - How to read a pdf to memory instead of having to write to disk
 
-The [PageOject Class](https://pypdf.readthedocs.io/en/stable/modules/PageObject.html?highlight=add_transformation#the-pageobject-class) represents a single within a PDF file. 
+The [PageOject Class](https://pypdf.readthedocs.io/en/stable/modules/PageObject.html?highlight=add_transformation#the-pageobject-class) represents a single page within a PDF file. 
 
 Typically this object will be created by accessing the ```pdf_reader_object.pages``` or ```pdf_writer_object.pages```, a list of all the pages, a page is a PageOject Class which is a subclass of the PdfReader and PdfWriter classes, but it is also possible to create an empty page with the ```create_blank_page()```.
 
