@@ -72,5 +72,42 @@ Project map:
   ```for number, line in enumerate(full_page_text.splitlines()): ```
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+## PyPDF PDF Manipulation  
+(PyPDF PDF Manipulation.ipynb)
 
+-----------------------------------------------------------------------------------------------------------------------------
 
+Projects Description:   
+Using PyPDF to manipulate PDF files.
+- How to work with pages
+- How to scale, rotate, crop, clip, and watermark pages
+- How to split and join pages
+- How to read a pdf to memory instead of having to write to disk
+
+The [PageOject Class](https://pypdf.readthedocs.io/en/stable/modules/PageObject.html?highlight=add_transformation#the-pageobject-class) represents a single within a PDF file. 
+
+Typically this object will be created by accessing the ```pdf_reader_object.pages``` or ```pdf_writer_object.pages```, a list of all the pages, a page is a PageOject Class which is a subclass of the PdfReader and PdfWriter classes, but it is also possible to create an empty page with the ```create_blank_page()```.
+
+Project map:
+- Transformation Matrix 
+    - Sheer Transformation x Axis To The Right ```page.add_transformation( (1,0,.5,1,0,0) )```
+    - Sheer Transformation y Axis up ```page.add_transformation( (scale,0,0,scale,0,0) )```
+    - Scaling Pages ```page.add_transformation( (scale,0,0,scale,0,0) )```
+    - More Transformation Using the Transformation Matrix Method
+- Rotated Page -```page.rotate(90)```
+- Creating Blank Pages
+    - Stand alone blank page ```blank_page = pages[0].create_blank_page(pdf=pdf_reader, width=None, height=None)```
+    - Add a blank page at a particular index ```pdf_writer.insert_blank_page(None, None, 2)```
+    - Add a blank page at the end of a PDF ```pdf_writer.add_blank_page()```
+- Splitting PDFs
+    - Splitting Documents in Half Or Thirds ```pdf_writer_0_to_5.append( pdf_reader, pages=(0, 5) )```
+    - Splitting Documents by Individual Pages ```pdf_writer_even.append( pdf_reader, pages=[0,2,4,6,8,10] )```
+- Merging PDFs ```for pdf in PDFList : pdf_writer_merged.append(pdf)```-
+- PDF Boxes
+    - Display Boxes Boundaries Functions
+    - Format Page From A5 to A5 
+- Clipping - Merge Pages ```page.merge_page(overlay_page)```
+- Water Marking - Merge Pages ```page.merge_page(page_watermark, True, False)```
+- Read PDF From Memory
+- Decreasing PDF file size - PDF Compression ```page.compress_content_streams()```
