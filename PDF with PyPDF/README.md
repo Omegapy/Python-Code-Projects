@@ -71,7 +71,6 @@ Project map:
 - Get Text From Page - full page and lines ```xmp = pdf_reader.xmp_metadata``` and  
   ```for number, line in enumerate(full_page_text.splitlines()): ```
 
-
 -----------------------------------------------------------------------------------------------------------------------------
 ## PyPDF PDF Manipulation  
 (PyPDF PDF Manipulation.ipynb)
@@ -111,3 +110,31 @@ Project map:
 - Water Marking - Merge Pages ```page.merge_page(page_watermark, True, False)```
 - Read PDF From Memory
 - Decreasing PDF file size - PDF Compression ```page.compress_content_streams()```
+
+-----------------------------------------------------------------------------------------------------------------------------
+## Writing Data in PDFs
+(Writing Data.ipynb)
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Projects Description:  
+Using ```PdfFileWriter``` class to add:
+- Javascript
+- Bookmarks
+- Links
+- Metadata
+- Fill in form fields
+- Open password-protected files
+
+The [PdfFileWriter](https://pypdf.readthedocs.io/en/stable/modules/PdfWriter.html?highlight=PdfFileWriter%20class) writes PDF files out, given pages produced by another class.  
+Typically, data is added from a ```PdfReader``` object.
+
+Project map:
+- Add Javascript ```pdf_writer.add_js(Javascript Code)```
+- Encrypting and Decrypting (Password Protection)
+    - Encrypting PDF ```pdf_writer.encrypt("my-secret-password", algorithm="AES-256")```
+    - Decrypting PDF ```if reader.is_encrypted: pdf_reader.decrypt("my-secret-password")``` 
+- Filling In Fields ```pdf_writer.update_page_form_field_values(page, field_dictionary)```
+- Adding Bookmarks ```pdf_writer.add_outline_item(title="Go to page 1", page_number=0, color=(0.1,0.1,0.5)) # Index 0 is page 1```
+
+
