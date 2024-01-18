@@ -121,8 +121,6 @@ Projects Description:
 Using ```PdfFileWriter``` class to add:
 - Javascript
 - Bookmarks
-- Links
-- Metadata
 - Fill in form fields
 - Open password-protected files
 
