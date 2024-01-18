@@ -16,6 +16,8 @@ Requirements:
 - [Python](https://www.python.org/)   
 - [Jupyter Notebook](https://jupyter.org/) 
 
+Note: I use [pipenv]( https://pipenv.pypa.io/en/latest/) as my Python virtual environment
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 My Links:   
