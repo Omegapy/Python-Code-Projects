@@ -26,7 +26,9 @@ Requirements:
 Project map:
 - The PyPDF PdfReader class (PdfReader.ipynb)
 	Using the PyPDF [PdfReader](https://pypdf.readthedocs.io/en/stable/modules/PdfReader.html?highlight=PdfReader) class to read from a PDf file.
-
+- PyPDF PDF Manipulation
+- Writing Data in PDFs
+  
 -----------------------------------------------------------------------------------------------------------------------------
 
 My Links:   
